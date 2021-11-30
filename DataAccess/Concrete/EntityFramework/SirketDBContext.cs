@@ -13,6 +13,11 @@ namespace DataAccess.Concrete.EntityFramework
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SirketDB;Trusted_Connection=true");
         }
 
-        public DbSet<Calisan> Calisanlar { get; set; }
+        public DbSet<Calisan> Calisanlar { get; set;  }
+
+
+
+
+
     }
 }
