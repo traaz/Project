@@ -33,6 +33,10 @@ namespace WebAPI
             services.AddSingleton<ICalisanService, CalisanManager>();
             services.AddSingleton<ICalisanDal, EfCalisanDal>();
             services.AddSwaggerDocument();
+            services.AddSingleton<IHastalikService, HastalikManager>();
+            services.AddSingleton<IHastalikDal, EfHastalikDal>();
+            services.AddSingleton<IReceteService, ReceteManager>();
+            services.AddSingleton<IReceteDal, EfReceteDal>();
 
         }
 

@@ -8,6 +8,5 @@ C:\Users\trka8\source\repos\Project\Entities\obj\Debug\netcoreapp3.1\Entities.Ge
 C:\Users\trka8\source\repos\Project\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
 C:\Users\trka8\source\repos\Project\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
 C:\Users\trka8\source\repos\Project\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
-C:\Users\trka8\source\repos\Project\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CopyComplete
 C:\Users\trka8\source\repos\Project\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 C:\Users\trka8\source\repos\Project\Entities\obj\Debug\netcoreapp3.1\Entities.pdb

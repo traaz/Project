@@ -37,7 +37,7 @@ namespace Business.Concrete
         public IResult Update(Calisan calisan)
         {
             _calisanDal.Update(calisan);
-            return new SuccessResult("Calisan güncellendi");
+            return new SuccessResult("Kullanıcı güncellendi");
         }
     }
 }

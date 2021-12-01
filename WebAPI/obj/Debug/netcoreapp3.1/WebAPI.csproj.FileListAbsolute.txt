@@ -167,7 +167,7 @@ C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\staticwebasse
 C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWebAssets.xml
 C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebAPI.styles.css
 C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.RazorTargetAssemblyInfo.cache
-C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CopyComplete
 C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
+C:\Users\trka8\source\repos\Project\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CopyComplete
