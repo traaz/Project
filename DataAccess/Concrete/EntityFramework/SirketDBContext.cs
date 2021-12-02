@@ -16,6 +16,8 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Calisan> Calisanlar { get; set;  }
         public DbSet<Hastalik> Hastaliklar { get; set; }
         public DbSet<Recete> Receteler { get; set; }
+        public DbSet<Covid> Covids { get; set; }
+        public DbSet<Mesai> Mesailer { get; set; }
 
 
 

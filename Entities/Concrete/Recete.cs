@@ -10,12 +10,10 @@ namespace Entities.Concrete
         public int ReceteId { get; set; }
         public int CalisanId { get; set; }
         public int HastalikId { get; set; }
-        public string Ilac_1 { get; set; }
-        public string Ilac_2 { get; set; }
-        public string Ilac_3 { get; set; }
+        public string Ilac { get; set; }
+        
         public string Dozlar { get; set; }
-        public string Sempton_1 { get; set; }
-        public string Sempton_2 { get; set; }
-        public string Sempton_3 { get; set; }
+        public string Sempton { get; set; }
+     
     }
 }

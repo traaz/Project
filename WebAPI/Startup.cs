@@ -37,6 +37,12 @@ namespace WebAPI
             services.AddSingleton<IHastalikDal, EfHastalikDal>();
             services.AddSingleton<IReceteService, ReceteManager>();
             services.AddSingleton<IReceteDal, EfReceteDal>();
+            services.AddSingleton<ICovidService, CovidManager>();
+            services.AddSingleton<ICovidDal, EfCovidDal>();
+            services.AddSingleton<IMesaiService, MesaiManager>();
+            services.AddSingleton<IMesaiDal, EfMesaiDal>();
+
+
 
         }
 
