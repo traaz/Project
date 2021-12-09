@@ -13,8 +13,8 @@ namespace Entities.Concrete
 
         public string IsBitisGun { get; set; }
 
-        public string IsBaslangicSaat { get; set; }
-        public string IsBitisSaat { get; set; }
+        public TimeSpan IsBaslangicSaat { get; set; }
+        public TimeSpan IsBitisSaat { get; set; }
 
     }
 }
