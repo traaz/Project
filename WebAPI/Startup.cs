@@ -41,7 +41,16 @@ namespace WebAPI
             services.AddSingleton<ICovidDal, EfCovidDal>();
             services.AddSingleton<IMesaiService, MesaiManager>();
             services.AddSingleton<IMesaiDal, EfMesaiDal>();
-
+            services.AddSingleton<IHobiService, HobiManager>();
+            services.AddSingleton<IHobiDal, EfHobiDal>();
+            services.AddSingleton<IilacService, IlacManager>();
+            services.AddSingleton<IilacDal, EfIlacDal>();
+            services.AddSingleton<IDozService, DozManager>();
+            services.AddSingleton<IDozDal, EfDozDal>();
+            services.AddSingleton<ISemptonService, SemptonManager>();
+            services.AddSingleton<ISemptonDal, EfSemptonDal>();
+            services.AddSingleton<ICovBelirtiService, CovidBelirtiManager>();
+            services.AddSingleton<ICovBelirtiDal, EfCovBelirtiDal>();
 
 
         }

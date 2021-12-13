@@ -15,7 +15,6 @@ namespace Entities.Concrete
         public string DogumSehir { get; set; }
         public string IsPozisyonu { get; set; }
         public int Maas { get; set; }
-        public string Hobiler { get; set; }
         public int Lisans { get; set; }
         public int YuksekLisans { get; set; }
         public int Doktora { get; set; }
