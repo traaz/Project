@@ -51,6 +51,10 @@ namespace WebAPI
             services.AddSingleton<ISemptonDal, EfSemptonDal>();
             services.AddSingleton<ICovBelirtiService, CovidBelirtiManager>();
             services.AddSingleton<ICovBelirtiDal, EfCovBelirtiDal>();
+            services.AddSingleton<IAsiService, AsiManager>();
+            services.AddSingleton<IAsiDal, EfAsiDal>();
+            services.AddSingleton<IKronikHastalikService, KronikHastalikManager>();
+            services.AddSingleton<IKronikHastalikDal, EfKronikHastalikDal>();
 
 
         }

@@ -23,6 +23,8 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Dozz> Dozlar { get; set; }
         public DbSet<Sempton> Semptonlar { get; set; }
         public DbSet<CovidBelirti> CovidBelirtiler { get; set; }
+        public DbSet<Asi> Asilar { get; set; }
+        public DbSet<KronikHastalik> KronikHastaliklar { get; set; }
 
 
 
