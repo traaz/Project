@@ -10,5 +10,11 @@ namespace DataAccess.Concrete.EntityFramework
    public class EfCovBelirtiDal: EfEntityRepositoryBase<CovidBelirti, SirketDBContext>, ICovBelirtiDal
     {
 
+
+
+
+
+
+
     }
 }

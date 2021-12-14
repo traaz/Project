@@ -9,5 +9,11 @@ namespace DataAccess.Concrete.EntityFramework
 {
    public class EfAsiDal: EfEntityRepositoryBase<Asi, SirketDBContext>, IAsiDal
     {
+
+
+
+
+
+
     }
 }
