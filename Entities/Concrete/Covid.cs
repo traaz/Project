@@ -12,10 +12,8 @@ namespace Entities.Concrete
         public int TemasliCalisanId { get; set; }
         public DateTime CovidYakalanmaTarih { get; set; }
         public DateTime CovidBitisTarih { get; set; }
-        public string CovidOncesiBelirti { get; set; }
 
         public string AsiDurumu { get; set; }
-        public string OncedenVurulanAsi { get; set; }
         public string KronikHastalik { get; set; }
 
     }
