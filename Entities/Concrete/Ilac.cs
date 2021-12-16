@@ -10,5 +10,6 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string IlacIsmi { get; set; }
         public int HastalikId { get; set; }
+        public int CalisanId { get; set; }
     }
 }
