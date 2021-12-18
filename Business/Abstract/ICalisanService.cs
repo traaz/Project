@@ -16,6 +16,7 @@ namespace Business.Abstract
         List<int> GetLisanCovid();
         List<int> GetYuksekLisansCovid();
         List<int> GetDoktoraCovid();
-        
+
+        IDataResult<Calisan> GetById(int id);
     }
 }

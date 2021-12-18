@@ -87,6 +87,16 @@ namespace WebAPI.Controllers
 
         }
 
+        [HttpGet("getById")]
+        public IActionResult GetById(int id)
+        {
+            var result = _calisanService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
 
     }
 }

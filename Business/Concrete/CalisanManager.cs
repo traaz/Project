@@ -29,6 +29,11 @@ namespace Business.Concrete
             return new SuccessResult("Calisan silindi");
         }
 
+        public IDataResult<Calisan> GetById(int id)
+        {
+            return new SuccessDataResult<Calisan>(_calisanDal.Get(c => c.CalisanId == id));
+        }
+
         public IDataResult<List<Calisan>> GetAll()
         {
             return new SuccessDataResult<List<Calisan>>(_calisanDal.GetAll());
