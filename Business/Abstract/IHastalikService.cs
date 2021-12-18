@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,5 +13,6 @@ namespace Business.Abstract
         IResult Add(Hastalik hastalik);
         IResult Delete(Hastalik hastalik);
         IResult Update(Hastalik hastalik);
+        IDataResult<List<string>> GetHastalikDto();
     }
 }

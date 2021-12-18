@@ -61,5 +61,17 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+
+        [HttpGet("getTopHastalik")]
+        public IActionResult GetTopHastalik()
+        {
+            var result = _hastalikService.GetHastalikDto();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
     }
 }
