@@ -44,8 +44,6 @@ namespace WebAPI
             services.AddSingleton<IHobiDal, EfHobiDal>();
             services.AddSingleton<IilacService, IlacManager>();
             services.AddSingleton<IilacDal, EfIlacDal>();
-            services.AddSingleton<IDozService, DozManager>();
-            services.AddSingleton<IDozDal, EfDozDal>();
             services.AddSingleton<ISemptonService, SemptonManager>();
             services.AddSingleton<ISemptonDal, EfSemptonDal>();
             services.AddSingleton<ICovBelirtiService, CovidBelirtiManager>();
