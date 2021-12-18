@@ -2,7 +2,6 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
-using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,7 +34,25 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Calisan>>(_calisanDal.GetAll());
         }
 
-       
+        public List<int> GetDoktoraCovid()
+        {
+            return _calisanDal.GetDoktoraCovid();
+        }
+
+        public List<int> GetLisanCovid()
+        {
+            return _calisanDal.GetLisansCovid();
+        }
+
+        public List<int> GetLisanssizCovid()
+        {
+            return _calisanDal.GetLisanssizCovid();
+        }
+
+        public List<int> GetYuksekLisansCovid()
+        {
+            return _calisanDal.GetYuksekLisansCovid();
+        }
 
         public IResult Update(Calisan calisan)
         {

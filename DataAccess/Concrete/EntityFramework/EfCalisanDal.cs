@@ -1,7 +1,6 @@
 ﻿using Core.DataAccess.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
-using Entities.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,40 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCalisanDal : EfEntityRepositoryBase<Calisan, SirketDBContext>, ICalisanDal
     {
-        public List<LisansCovid> GetLisansCovid()
+        public List<int> GetDoktoraCovid()
+        {
+            using (SirketDBContext context = new SirketDBContext())
+            {
+                var result =
+    (from cal1 in context.Calisanlar
+     where cal1.Doktora == 1
+     select cal1.CalisanId)
+    .Intersect
+        (from cal2 in context.Covids
+         select cal2.CalisanId);
+
+                return result.ToList();
+            }
+        }
+        public List<int> GetLisansCovid()
+        {
+            using (SirketDBContext context = new SirketDBContext())
+            {
+                var result =
+    (from cal1 in context.Calisanlar
+     where cal1.Lisans == 1
+     select cal1.CalisanId)
+    .Intersect
+        (from cal2 in context.Covids
+         select cal2.CalisanId);
+
+                return result.ToList();
+
+
+            }
+        }
+
+        public List<int> GetLisanssizCovid()
         {
             using (SirketDBContext context = new SirketDBContext())
             {
@@ -26,22 +58,21 @@ namespace DataAccess.Concrete.EntityFramework
          select cal2.CalisanId);
 
                 return result.ToList();
-                
-                
+            }
+        }
+        public List<int> GetYuksekLisansCovid()
+        {
+            using (SirketDBContext context = new SirketDBContext())
+            {
+                var result =
+    (from cal1 in context.Calisanlar
+     where cal1.YuksekLisans == 1
+     select cal1.CalisanId)
+    .Intersect
+        (from cal2 in context.Covids
+         select cal2.CalisanId);
 
-
-
-
-
-                /*from c in context.C
-                         join b in context.Brands
-                         on c.BrandId equals b.BrandId
-                         join co in context.Colors
-                         on c.ColorId equals co.ColorId
-
-                         select new CarDetailDto { CarDescription = c.Description, BrandName = b.BrandName, ColorName = co.ColorName, DailyPrice = c.DailyPrice };
-
-            return result.ToList();*/
+                return result.ToList();
             }
         }
     }

@@ -62,7 +62,31 @@ namespace WebAPI.Controllers
         }
 
 
+        [HttpGet("getLisansCovid")]
+        public List<int> GetLisansCovid()
+        {
+           return _calisanService.GetLisanCovid();
+            
+        }
+        [HttpGet("getYuksekLisansCovid")]
+        public List<int> GetYuksekLisansCovid()
+        {
+            return _calisanService.GetYuksekLisansCovid();
 
-       
+        }
+        [HttpGet("getDoktoraCovid")]
+        public List<int> GetDoktoraCovid()
+        {
+            return _calisanService.GetDoktoraCovid();
+
+        }
+        [HttpGet("getLisanssizCovid")]
+        public List<int> GetLisanssizCovid()
+        {
+            return _calisanService.GetLisanssizCovid();
+
+        }
+
+
     }
 }
