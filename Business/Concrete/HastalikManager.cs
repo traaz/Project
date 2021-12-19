@@ -45,6 +45,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<string>>(_hastalikDal.GetHastalikDto());
         }
 
+        public IDataResult<List<HastalikDto>> GetSehirTopHastalik(string sehir)
+        {
+            return new SuccessDataResult<List<HastalikDto>>(_hastalikDal.GetSehirHastalik(sehir));
+        }
+
         public IResult Update(Hastalik hastalik)
         {
             _hastalikDal.Update(hastalik);

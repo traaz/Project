@@ -11,5 +11,6 @@ namespace DataAccess.Abstract
     {
         List<string> GetHastalikDto();
         List<HastaCalisanlarDto> GetHastaCalisanDto();
+        List<HastalikDto> GetSehirHastalik(string sehir);
     }
 }

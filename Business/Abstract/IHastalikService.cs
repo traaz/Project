@@ -15,5 +15,6 @@ namespace Business.Abstract
         IResult Update(Hastalik hastalik);
         IDataResult<List<string>> GetHastalikDto();
         IDataResult<List<HastaCalisanlarDto>> GetHastaCalisanlarDto();
+        IDataResult<List<HastalikDto>> GetSehirTopHastalik(string sehir);
     }
 }

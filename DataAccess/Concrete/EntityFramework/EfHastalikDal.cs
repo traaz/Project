@@ -61,6 +61,23 @@ namespace DataAccess.Concrete.EntityFramework
 
             }
         }
+
+        public List<HastalikDto> GetSehirHastalik(string sehir)
+        {
+            using (SirketDBContext context = new SirketDBContext())
+            {
+                
+                var result = from hastalik in context.Hastaliklar
+                             join calisan in context.Calisanlar
+                             on hastalik.CalisanId equals calisan.CalisanId
+                             where calisan.DogumSehir == sehir
+                             group hastalik by hastalik.HastalikIsmi into isim
+                             orderby isim.Count() descending
+                            select new HastalikDto { HastalikIsmi = isim.Key };
+                return result.Take(3).ToList();
+
+            }
+            }
     }
 }
 
