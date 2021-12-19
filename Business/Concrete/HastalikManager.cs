@@ -35,6 +35,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Hastalik>>(_hastalikDal.GetAll());
         }
 
+        public IDataResult<List<HastaCalisanlarDto>> GetHastaCalisanlarDto()
+        {
+            return new SuccessDataResult<List<HastaCalisanlarDto>>(_hastalikDal.GetHastaCalisanDto());
+        }
+
         public IDataResult<List<string>> GetHastalikDto()
         {
             return new SuccessDataResult<List<string>>(_hastalikDal.GetHastalikDto());
@@ -45,5 +50,7 @@ namespace Business.Concrete
             _hastalikDal.Update(hastalik);
             return new SuccessResult("Hastalik güncellendi");
         }
+
+     
     }
 }

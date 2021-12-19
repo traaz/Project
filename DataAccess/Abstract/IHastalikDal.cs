@@ -10,5 +10,6 @@ namespace DataAccess.Abstract
    public interface IHastalikDal: IEntityRepository<Hastalik>
     {
         List<string> GetHastalikDto();
+        List<HastaCalisanlarDto> GetHastaCalisanDto();
     }
 }

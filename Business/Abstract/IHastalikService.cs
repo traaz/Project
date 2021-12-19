@@ -14,5 +14,6 @@ namespace Business.Abstract
         IResult Delete(Hastalik hastalik);
         IResult Update(Hastalik hastalik);
         IDataResult<List<string>> GetHastalikDto();
+        IDataResult<List<HastaCalisanlarDto>> GetHastaCalisanlarDto();
     }
 }
