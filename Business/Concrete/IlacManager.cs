@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -32,6 +33,16 @@ namespace Business.Concrete
         public IDataResult<List<Ilac>> GetAll()
         {
             return new SuccessDataResult<List<Ilac>>(_ilacDal.GetAll());
+        }
+
+        public IDataResult<List<IlacCovidDto>> GetIlacCovidDto()
+        {
+            return new SuccessDataResult<List<IlacCovidDto>>(_ilacDal.GetIlacCovidDto());
+        }
+
+        public IDataResult<List<string>> GetTop3Ilac()
+        {
+            return new SuccessDataResult<List<string>>(_ilacDal.GetTop3Ilac());
         }
 
         public IResult Update(Ilac ilac)

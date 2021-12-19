@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,5 +13,7 @@ namespace Business.Abstract
         IResult Add(Ilac ilac);
         IResult Delete(Ilac ilac);
         IResult Update(Ilac ilac);
+        IDataResult<List<string>> GetTop3Ilac();
+        IDataResult<List<IlacCovidDto>> GetIlacCovidDto();
     }
 }
