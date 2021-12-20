@@ -10,6 +10,7 @@ namespace DataAccess.Abstract
    public interface IilacDal: IEntityRepository<Ilac>
     {
         List<string> GetTop3Ilac();
-        List<IlacCovidDto> GetIlacCovidDto();
+        List<IlacCovidDto> GetTop3IlacCovidDto();
+        List<IlacCovidDto> GetCovid(string ilac);
     }
 }

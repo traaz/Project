@@ -35,9 +35,14 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Ilac>>(_ilacDal.GetAll());
         }
 
+        public IDataResult<List<IlacCovidDto>> GetCovid(string ilac)
+        {
+            return new SuccessDataResult<List<IlacCovidDto>>(_ilacDal.GetCovid(ilac));
+        }
+
         public IDataResult<List<IlacCovidDto>> GetIlacCovidDto()
         {
-            return new SuccessDataResult<List<IlacCovidDto>>(_ilacDal.GetIlacCovidDto());
+            return new SuccessDataResult<List<IlacCovidDto>>(_ilacDal.GetTop3IlacCovidDto());
         }
 
         public IDataResult<List<string>> GetTop3Ilac()

@@ -71,10 +71,21 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpGet("getIlacCovid")]
+        [HttpGet("getTop3IlacCovid")]
         public IActionResult GetIlacCovid()
         {
             var result = _ilacService.GetIlacCovidDto();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("getCovid")]
+        public IActionResult GetCovid(string sehir)
+        {
+            var result = _ilacService.GetCovid(sehir);
             if (result.Success)
             {
                 return Ok(result.Data);

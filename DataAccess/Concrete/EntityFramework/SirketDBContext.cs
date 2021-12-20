@@ -20,7 +20,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Covid> Covids { get; set; }
         public DbSet<Mesai> Mesailer { get; set; }
         public DbSet<Ilac> Ilaclar { get; set; }
-        
+        public DbSet<Temasli> Temaslilar { get; set; }
         public DbSet<Sempton> Semptonlar { get; set; }
         public DbSet<CovidBelirti> CovidBelirtiler { get; set; }
         public DbSet<Asi> Asilar { get; set; }

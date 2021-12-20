@@ -15,5 +15,7 @@ namespace Business.Abstract
         IResult Update(Ilac ilac);
         IDataResult<List<string>> GetTop3Ilac();
         IDataResult<List<IlacCovidDto>> GetIlacCovidDto();
+        IDataResult<List<IlacCovidDto>> GetCovid(string ilac);
+
     }
 }

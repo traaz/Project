@@ -9,7 +9,7 @@ namespace Entities.Concrete
     {
         public int CovidId { get; set; }
         public int CalisanId { get; set; }
-        public int TemasliCalisanId { get; set; }
+        
         public DateTime CovidYakalanmaTarih { get; set; }
         public DateTime CovidBitisTarih { get; set; }
 

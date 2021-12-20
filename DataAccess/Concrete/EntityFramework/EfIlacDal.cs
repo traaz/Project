@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfIlacDal : EfEntityRepositoryBase<Ilac, SirketDBContext>, IilacDal
     {
-
+       
         public List<string> GetTop3Ilac()
         {
             using (SirketDBContext context=new SirketDBContext())
@@ -28,7 +28,7 @@ namespace DataAccess.Concrete.EntityFramework
         }
 
 
-        public List<IlacCovidDto> GetIlacCovidDto()
+        public List<IlacCovidDto> GetTop3IlacCovidDto()
         {
             using(SirketDBContext context=new SirketDBContext())
             {
@@ -57,5 +57,31 @@ namespace DataAccess.Concrete.EntityFramework
 
             }
         }
+
+        public List<IlacCovidDto> GetCovid(string ilac)
+        {
+            using(SirketDBContext context=new SirketDBContext())
+            {
+                var result=  from covids in context.Covids
+                             join calisan in context.Calisanlar on covids.CalisanId equals calisan.CalisanId
+                             join i in context.Ilaclar on covids.CalisanId equals i.CalisanId
+                             where i.IlacIsmi == ilac
+                             select new IlacCovidDto
+                             {
+                                 TcNo = calisan.TcNo,
+                                 Isim = calisan.Isim,
+                                 Soyisim = calisan.Soyisim,
+                                 CovidYakalanmaTarih = covids.CovidYakalanmaTarih,
+                                 CovidBitisTarih = covids.CovidBitisTarih,
+                                 IlacIsmi = i.IlacIsmi
+                             };
+
+                return result.ToList();
+
+
+
+            }
+        }
+
     }
 }

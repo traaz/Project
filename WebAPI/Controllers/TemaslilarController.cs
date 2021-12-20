@@ -11,18 +11,19 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CovidsController : ControllerBase
+    public class TemaslilarController : ControllerBase
     {
-        ICovidService _covidService;
+        ITemasliService _temasliService;
 
-        public CovidsController(ICovidService covidService)
+        public TemaslilarController(ITemasliService temasliService)
         {
-            _covidService = covidService;
+            _temasliService = temasliService;
         }
+
         [HttpGet("getall")]
         public IActionResult Get()
         {
-            var result = _covidService.GetAll();
+            var result = _temasliService.GetAll();
             if (result.Success)
             {
                 return Ok(result.Data);
@@ -30,9 +31,9 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpPost("add")]
-        public IActionResult Post(Covid covid)
+        public IActionResult Post(Temasli temasli)
         {
-            var result = _covidService.Add(covid);
+            var result = _temasliService.Add(temasli);
             if (result.Success)
             {
                 return Ok(result);
@@ -40,9 +41,9 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpPut("update")]
-        public IActionResult Put(Covid covid)
+        public IActionResult Put(Temasli temasli)
         {
-            var result = _covidService.Update(covid);
+            var result = _temasliService.Update(temasli);
             if (result.Success)
             {
                 return Ok(result);
@@ -51,9 +52,9 @@ namespace WebAPI.Controllers
 
         }
         [HttpDelete("delete")]
-        public IActionResult Delete(Covid covid)
+        public IActionResult Delete(Temasli temasli)
         {
-            var result = _covidService.Delete(covid);
+            var result = _temasliService.Delete(temasli);
             if (result.Success)
             {
                 return Ok(result);
@@ -61,15 +62,5 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getBiontech")]
-        public IActionResult GetBiontecch()
-        {
-            var result = _covidService.GetBiontech();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
     }
 }

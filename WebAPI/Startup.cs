@@ -52,6 +52,8 @@ namespace WebAPI
             services.AddSingleton<IAsiDal, EfAsiDal>();
             services.AddSingleton<IKronikHastalikService, KronikHastalikManager>();
             services.AddSingleton<IKronikHastalikDal, EfKronikHastalikDal>();
+            services.AddSingleton<ITemasliService, TemasliManager>();
+            services.AddSingleton<ITemasliDal, EfTemasliDal>();
 
 
         }
