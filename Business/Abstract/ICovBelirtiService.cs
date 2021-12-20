@@ -13,6 +13,7 @@ namespace Business.Abstract
         IResult Add(CovidBelirti covidBelirti);
         IResult Delete(CovidBelirti covidBelirti);
         IResult Update(CovidBelirti covidBelirti);
+        IDataResult<List<string>> GetTop3Belirti();
 
     }
 }

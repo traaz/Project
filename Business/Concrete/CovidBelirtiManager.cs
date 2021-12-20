@@ -34,6 +34,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<CovidBelirti>>(_covBelirtiDal.GetAll());
         }
 
+        public IDataResult<List<string>> GetTop3Belirti()
+        {
+            return new SuccessDataResult<List<string>>(_covBelirtiDal.GetTop3Belirti());
+        }
+
         public IResult Update(CovidBelirti covidBelirti)
         {
             _covBelirtiDal.Update(covidBelirti);

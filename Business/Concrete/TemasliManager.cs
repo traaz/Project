@@ -34,6 +34,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Temasli>>(_temasliDal.GetAll());
         }
 
+        public IDataResult<List<int>> GetTop3TemasliId()
+        {
+            return new SuccessDataResult<List<int>>(_temasliDal.GetTop3TemasliId());
+        }
+
         public IResult Update(Temasli temasli)
         {
             _temasliDal.Update(temasli);

@@ -10,5 +10,7 @@ namespace DataAccess.Abstract
    public interface ICovidDal: IEntityRepository<Covid>
     {
         List<BiontechDto> GetBiontech();
+        AsiCovidDto GetAsiCovidDto();
+        List<KanGrubuCovidDto> GetKanGrubuCovidDto();
     }
 }

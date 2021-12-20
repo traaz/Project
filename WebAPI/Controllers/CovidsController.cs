@@ -71,5 +71,16 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpGet("getKanGrubuCovid")]
+        public IActionResult GetKanGrubuCovid()
+        {
+            var result = _covidService.GetKanGrubuCovid();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
     }
 }

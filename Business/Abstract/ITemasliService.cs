@@ -12,5 +12,6 @@ namespace Business.Abstract
         IResult Add(Temasli temasli);
         IResult Delete(Temasli temasli);
         IResult Update(Temasli temasli);
+        IDataResult<List<int>> GetTop3TemasliId();
     }
 }

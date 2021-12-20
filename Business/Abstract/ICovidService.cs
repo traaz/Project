@@ -14,5 +14,6 @@ namespace Business.Abstract
         IResult Delete(Covid covid);
         IResult Update(Covid covid);
         IDataResult<List<BiontechDto>> GetBiontech();
+        IDataResult<List<KanGrubuCovidDto>> GetKanGrubuCovid();
     }
 }

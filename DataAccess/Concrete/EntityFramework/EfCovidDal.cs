@@ -12,6 +12,16 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCovidDal : EfEntityRepositoryBase<Covid, SirketDBContext>, ICovidDal
     {
+        public AsiCovidDto GetAsiCovidDto()
+        {
+            using(SirketDBContext context=new SirketDBContext())
+            {
+                
+                            return null;
+                            
+            }
+        }
+
         public List<BiontechDto> GetBiontech()
         {
             using(SirketDBContext context=new SirketDBContext())
@@ -35,6 +45,23 @@ namespace DataAccess.Concrete.EntityFramework
                 return result.ToList();
 
             }
+        }
+
+        public List<KanGrubuCovidDto> GetKanGrubuCovidDto()
+        {
+            using(SirketDBContext context=new SirketDBContext())
+            {
+                var result = from calisan in context.Calisanlar
+                             join covids in context.Covids on calisan.CalisanId equals covids.CalisanId
+                             group calisan by calisan.KanGrubu into kan
+                             select new KanGrubuCovidDto
+                             {
+                                 KanGrubu = kan.Key,
+                                 CovidMiktari = kan.Count()
+                             };
+                return result.ToList();
+
+            } 
         }
     }
 }

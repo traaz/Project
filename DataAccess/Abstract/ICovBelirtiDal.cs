@@ -8,5 +8,6 @@ namespace DataAccess.Abstract
 {
   public  interface ICovBelirtiDal: IEntityRepository<CovidBelirti>
     {
+        List<string> GetTop3Belirti();
     }
 }
