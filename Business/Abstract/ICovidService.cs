@@ -15,5 +15,6 @@ namespace Business.Abstract
         IResult Update(Covid covid);
         IDataResult<List<BiontechDto>> GetBiontech();
         IDataResult<List<KanGrubuCovidDto>> GetKanGrubuCovid();
+        IDataResult<AsiCovidDto> GetAsiCovid();
     }
 }

@@ -82,5 +82,16 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpGet("getAsiCovidOrani")]
+        public IActionResult GetAsiCovidOrani()
+        {
+            var result = _covidService.GetAsiCovid();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
     }
 }

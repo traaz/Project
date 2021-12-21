@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -32,6 +33,11 @@ namespace Business.Concrete
         public IDataResult<List<KronikHastalik>> GetAll()
         {
             return new SuccessDataResult<List<KronikHastalik>>(_kronikHastalik.GetAll());
+        }
+
+        public IDataResult<List<KronikHastalikCovidDto>> GetKronikHastalikCovidDto(string kronikHastalik)
+        {
+            return new SuccessDataResult<List<KronikHastalikCovidDto>>(_kronikHastalik.GetKronikHastalikCovidDto(kronikHastalik));
         }
 
         public IResult Update(KronikHastalik kronikHastalik)

@@ -12,13 +12,19 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCovidDal : EfEntityRepositoryBase<Covid, SirketDBContext>, ICovidDal
     {
-        public AsiCovidDto GetAsiCovidDto()
+        public AsiCovidDto GetAsiCovid()
         {
             using(SirketDBContext context=new SirketDBContext())
             {
-                
-                            return null;
-                            
+                var query = from c in context.Covids
+                     group c by 1 into g
+                     select new AsiCovidDto
+                     {
+                         AsiCovidOrani = g.Sum(x => x.AsiDurumu == "1" ? 1 : 0) / (double)g.Max(x => x.CovidId),
+                         AsisizCovidOrani= g.Sum(x => x.AsiDurumu == "0" ? 1 : 0) / (double)g.Max(x => x.CovidId)
+
+                     };
+                return query.First();
             }
         }
 

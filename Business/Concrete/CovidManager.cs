@@ -35,6 +35,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Covid>>(_covidDal.GetAll());
         }
 
+        public IDataResult<AsiCovidDto> GetAsiCovid()
+        {
+            return new SuccessDataResult<AsiCovidDto>(_covidDal.GetAsiCovid());
+        }
+
         public IDataResult<List<BiontechDto>> GetBiontech()
         {
             return new SuccessDataResult<List<BiontechDto>>(_covidDal.GetBiontech());

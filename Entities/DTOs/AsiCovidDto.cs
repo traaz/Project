@@ -7,6 +7,7 @@ namespace Entities.DTOs
 {
   public  class AsiCovidDto:IDto
     {
-        public int AsiCovidOrani { get; set; }
+        public double AsiCovidOrani { get; set; }
+        public double AsisizCovidOrani { get; set; }
     }
 }
