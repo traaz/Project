@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -63,25 +64,25 @@ namespace WebAPI.Controllers
 
 
         [HttpGet("getLisansCovid")]
-        public List<int> GetLisansCovid()
+        public EgitimDurumuCovidDto GetLisansCovid()
         {
            return _calisanService.GetLisanCovid();
             
         }
         [HttpGet("getYuksekLisansCovid")]
-        public List<int> GetYuksekLisansCovid()
+        public EgitimDurumuCovidDto GetYuksekLisansCovid()
         {
             return _calisanService.GetYuksekLisansCovid();
 
         }
         [HttpGet("getDoktoraCovid")]
-        public List<int> GetDoktoraCovid()
+        public EgitimDurumuCovidDto GetDoktoraCovid()
         {
             return _calisanService.GetDoktoraCovid();
 
         }
         [HttpGet("getLisanssizCovid")]
-        public List<int> GetLisanssizCovid()
+        public EgitimDurumuCovidDto GetLisanssizCovid()
         {
             return _calisanService.GetLisanssizCovid();
 

@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -39,22 +40,22 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Calisan>>(_calisanDal.GetAll());
         }
 
-        public List<int> GetDoktoraCovid()
+        public EgitimDurumuCovidDto GetDoktoraCovid()
         {
             return _calisanDal.GetDoktoraCovid();
         }
 
-        public List<int> GetLisanCovid()
+        public EgitimDurumuCovidDto GetLisanCovid()
         {
             return _calisanDal.GetLisansCovid();
         }
 
-        public List<int> GetLisanssizCovid()
+        public EgitimDurumuCovidDto GetLisanssizCovid()
         {
             return _calisanDal.GetLisanssizCovid();
         }
 
-        public List<int> GetYuksekLisansCovid()
+        public EgitimDurumuCovidDto GetYuksekLisansCovid()
         {
             return _calisanDal.GetYuksekLisansCovid();
         }

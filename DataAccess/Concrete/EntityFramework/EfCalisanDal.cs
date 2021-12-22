@@ -1,6 +1,7 @@
 ﻿using Core.DataAccess.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCalisanDal : EfEntityRepositoryBase<Calisan, SirketDBContext>, ICalisanDal
     {
-        public List<int> GetDoktoraCovid()
+        public EgitimDurumuCovidDto GetDoktoraCovid()
         {
             using (SirketDBContext context = new SirketDBContext())
             {
@@ -24,10 +25,19 @@ namespace DataAccess.Concrete.EntityFramework
         (from cal2 in context.Covids
          select cal2.CalisanId);
 
-                return result.ToList();
+                int sayiMiktari =result.ToList().Count();
+                var query = new EgitimDurumuCovidDto
+                {
+                    SayiMiktari = sayiMiktari,
+                    CalisanId = result.ToList()
+                };
+                return query;
+               
             }
         }
-        public List<int> GetLisansCovid()
+
+
+        public EgitimDurumuCovidDto GetLisansCovid()
         {
             using (SirketDBContext context = new SirketDBContext())
             {
@@ -39,13 +49,19 @@ namespace DataAccess.Concrete.EntityFramework
         (from cal2 in context.Covids
          select cal2.CalisanId);
 
-                return result.ToList();
+                int sayiMiktari = result.ToList().Count();
+                var query = new EgitimDurumuCovidDto
+                {
+                    SayiMiktari = sayiMiktari,
+                    CalisanId = result.ToList()
+                };
+                return query;
 
 
             }
         }
 
-        public List<int> GetLisanssizCovid()
+        public EgitimDurumuCovidDto GetLisanssizCovid()
         {
             using (SirketDBContext context = new SirketDBContext())
             {
@@ -57,10 +73,16 @@ namespace DataAccess.Concrete.EntityFramework
         (from cal2 in context.Covids
          select cal2.CalisanId);
 
-                return result.ToList();
+                int sayiMiktari = result.ToList().Count();
+                var query = new EgitimDurumuCovidDto
+                {
+                    SayiMiktari = sayiMiktari,
+                    CalisanId = result.ToList()
+                };
+                return query;
             }
         }
-        public List<int> GetYuksekLisansCovid()
+        public EgitimDurumuCovidDto GetYuksekLisansCovid()
         {
             using (SirketDBContext context = new SirketDBContext())
             {
@@ -72,7 +94,13 @@ namespace DataAccess.Concrete.EntityFramework
         (from cal2 in context.Covids
          select cal2.CalisanId);
 
-                return result.ToList();
+                int sayiMiktari = result.ToList().Count();
+                var query = new EgitimDurumuCovidDto
+                {
+                    SayiMiktari = sayiMiktari,
+                    CalisanId = result.ToList()
+                };
+                return query;
             }
         }
     }
