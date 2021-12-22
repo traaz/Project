@@ -54,7 +54,7 @@ namespace WebAPI
             services.AddSingleton<IKronikHastalikDal, EfKronikHastalikDal>();
             services.AddSingleton<ITemasliService, TemasliManager>();
             services.AddSingleton<ITemasliDal, EfTemasliDal>();
-
+            services.AddControllers().AddNewtonsoftJson();
 
         }
 
