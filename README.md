@@ -39,3 +39,5 @@ Tüm bu bilgiler doğrultusunda oluşturacak olduğunuz veritabanına ilişkin y
 15- COVID’e yakalananlar arasında görülen en sık karşılaşılan ilk 3 belirti listelenebilmelidir.
 
 16- En fazla temasta bulunmuş ilk 3 çalışan listelenebilmelidir.
+
+17- Haftasona çalışan kişiler arasında COVID gözükme miktarı.
