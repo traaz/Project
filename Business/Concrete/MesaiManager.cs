@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -32,6 +33,11 @@ namespace Business.Concrete
         public IDataResult<List<Mesai>> GetAll()
         {
             return new SuccessDataResult<List<Mesai>>(_mesaiDal.GetAll());
+        }
+
+        public IDataResult<List<CalismaSaatiCovidDto>> GetCalismaSaatiCovidDto()
+        {
+            return new SuccessDataResult<List<CalismaSaatiCovidDto>>(_mesaiDal.GetCalismaSaatiCovid());
         }
 
         public IResult Update(Mesai mesai)

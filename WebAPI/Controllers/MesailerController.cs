@@ -61,5 +61,16 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpGet("getMesaiSaatiCovid")]
+        public IActionResult GetMesaiSaatiCovid()
+        {
+            var result = _mesaiService.GetCalismaSaatiCovidDto();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
     }
 }
