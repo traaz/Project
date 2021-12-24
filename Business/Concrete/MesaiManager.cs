@@ -40,6 +40,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<CalismaSaatiCovidDto>>(_mesaiDal.GetCalismaSaatiCovid());
         }
 
+        public IDataResult<HaftasonuCovidDto> GetHaftaSonuCovidDto()
+        {
+            return new SuccessDataResult<HaftasonuCovidDto>(_mesaiDal.GetHaftasonuCovidDto());
+        }
+
         public IResult Update(Mesai mesai)
         {
             _mesaiDal.Update(mesai);

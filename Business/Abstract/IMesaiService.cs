@@ -15,5 +15,6 @@ namespace Business.Abstract
         IResult Delete(Mesai mesai);
         IResult Update(Mesai mesai);
         IDataResult<List<CalismaSaatiCovidDto>> GetCalismaSaatiCovidDto();
+        IDataResult<HaftasonuCovidDto> GetHaftaSonuCovidDto();
     }
 }

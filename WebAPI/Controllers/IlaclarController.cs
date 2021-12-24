@@ -83,9 +83,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getCovid")]
-        public IActionResult GetCovid(string sehir)
+        public IActionResult GetCovid(string ilac)
         {
-            var result = _ilacService.GetCovid(sehir);
+            var result = _ilacService.GetCovid(ilac);
             if (result.Success)
             {
                 return Ok(result.Data);

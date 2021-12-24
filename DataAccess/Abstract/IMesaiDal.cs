@@ -10,5 +10,6 @@ namespace DataAccess.Abstract
   public  interface IMesaiDal : IEntityRepository<Mesai>
     {
         List<CalismaSaatiCovidDto> GetCalismaSaatiCovid();
+        HaftasonuCovidDto GetHaftasonuCovidDto();
     }
 }
