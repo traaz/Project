@@ -41,3 +41,5 @@ Tüm bu bilgiler doğrultusunda oluşturacak olduğunuz veritabanına ilişkin y
 16- En fazla temasta bulunmuş ilk 3 çalışan listelenebilmelidir.
 
 17- Haftasona çalışan kişiler arasında COVID gözükme miktarı.
+
+18- Biontech ve sinovac aşılarının etkinliği, COVID geçirme süresi göz önüne alınarak kıyaslanabilmelidir.
