@@ -60,5 +60,16 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpGet("getBiontechSinovacCovid")]
+        public IActionResult GetBiontechSinovacCovid()
+        {
+            var result = _asiService.GetBiontechSinovacCovid();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
     }
 }

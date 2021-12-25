@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -32,6 +33,11 @@ namespace Business.Concrete
         public IDataResult<List<Asi>> GetAll()
         {
             return new SuccessDataResult<List<Asi>>(_asiDal.GetAll());
+        }
+
+        public IDataResult<List<BiontechSinovacCovidDto>> GetBiontechSinovacCovid()
+        {
+            return new SuccessDataResult<List<BiontechSinovacCovidDto>>(_asiDal.GetBiontechSinovacCovidDto());
         }
 
         public IResult Update(Asi asi)
