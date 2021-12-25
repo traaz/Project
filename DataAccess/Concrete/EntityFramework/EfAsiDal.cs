@@ -21,12 +21,13 @@ namespace DataAccess.Concrete.EntityFramework
                 var result = from asi in context.Asilar
                              join covid in context.Covids
                              on asi.CovidId equals covid.CovidId
+                             group covid by asi.AsiIsmi into isim
                              select new BiontechSinovacCovidDto
                              {
-                                 CovidId=covid.CovidId,
-                                 AsiIsmi=asi.AsiIsmi,
-                                 CovidSuresi=EF.Functions.DateDiffDay(covid.CovidYakalanmaTarih,covid.CovidBitisTarih)
-                                
+                                 
+                                 AsiIsmi=isim.Key,
+                                 OrtalamaCovidSuresi = isim.Average(x => EF.Functions.DateDiffDay(x.CovidYakalanmaTarih, x.CovidBitisTarih))
+
                              };
                 return result.ToList();
 

@@ -7,8 +7,8 @@ namespace Entities.DTOs
 {
    public class BiontechSinovacCovidDto:IDto
     {
-        public int CovidId { get; set; }
+      
         public string AsiIsmi { get; set; }
-        public int CovidSuresi { get; set; }
+        public double OrtalamaCovidSuresi { get; set; }
     }
 }
