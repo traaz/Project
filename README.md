@@ -43,3 +43,5 @@ Tüm bu bilgiler doğrultusunda oluşturacak olduğunuz veritabanına ilişkin y
 17- Haftasona çalışan kişiler arasında COVID gözükme miktarı.
 
 18- Biontech ve sinovac aşılarının etkinliği, COVID geçirme süresi göz önüne alınarak kıyaslanabilmelidir.
+
+19- En sık hasta olan ilk 10 kişinin son bir ay içerisinde COVID’e yakalanma durumları listelenebilmelidir.
