@@ -1,4 +1,5 @@
 ﻿using Core.DataAccess.EntityFramework;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
@@ -13,6 +14,8 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCalisanDal : EfEntityRepositoryBase<Calisan, SirketDBContext>, ICalisanDal
     {
+       
+
         public EgitimDurumuCovidDto GetDoktoraCovid()
         {
             using (SirketDBContext context = new SirketDBContext())

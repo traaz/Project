@@ -3,6 +3,7 @@ using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,6 +77,47 @@ namespace DataAccess.Concrete.EntityFramework
                             select new HastalikDto { HastalikIsmi = isim.Key };
                 return result.Take(3).ToList();
 
+            }
+            }
+
+        public List<int> GetTop10HastalikCalisanId()
+        {
+            using (SirketDBContext context = new SirketDBContext())
+            {
+                var result= context.Hastaliklar
+.GroupBy(x => x.CalisanId)
+.OrderByDescending(grp => grp.Count())
+.Select(grp => grp.Key)
+.Take(10)
+.ToList();
+                return result.ToList();
+            }
+        }
+
+        public List<SonBirAyCovidDto> GetSonBirAyCovidDto()
+        {
+            using (SirketDBContext context = new SirketDBContext())
+            {
+                var query= context.Hastaliklar
+.GroupBy(x => x.CalisanId)
+.OrderByDescending(grp => grp.Count())
+.Select(grp => grp.Key)
+.Take(10)
+.ToList();
+                var result = from hastalik in context.Hastaliklar
+                             join covid in context.Covids
+                             on hastalik.CalisanId equals covid.CalisanId
+                             where query.Contains(hastalik.CalisanId) 
+                             && EF.Functions.DateDiffDay(covid.CovidYakalanmaTarih, DateTime.Now) < 30
+                             select new SonBirAyCovidDto
+                             {
+                                 CalisanId=hastalik.CalisanId,
+                                 CovidYakalanmaTarih=covid.CovidYakalanmaTarih,
+                                 CovidBitisTarih=covid.CovidBitisTarih
+                                 
+
+                             };
+                return result.ToList();               
             }
             }
     }

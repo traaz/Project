@@ -1,7 +1,9 @@
 ﻿using Entities.Concrete;
+
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
@@ -12,7 +14,7 @@ namespace DataAccess.Concrete.EntityFramework
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SirketDB;Trusted_Connection=true");
         }
-
+        
         public DbSet<Calisan> Calisanlar { get; set;  }
         public DbSet<Hobii> Hobiler { get; set; }
         public DbSet<Hastalik> Hastaliklar { get; set; }

@@ -96,5 +96,27 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpGet("getTop10HastalikCalisanId")]
+        public IActionResult GetTop10HastalikCalisanId( )
+        {
+            var result = _hastalikService.GetTop10HastalikCalisanId();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("getTop10HastalikCalisanSonBirAyCovid")]
+        public IActionResult GetTop10HastalikCalisanIdSonBirAyCovid()
+        {
+            var result = _hastalikService.GetSonBirAyCovidDto();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result);
+        }
     }
 }

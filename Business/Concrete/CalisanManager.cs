@@ -26,6 +26,8 @@ namespace Business.Concrete
 
         public IResult Delete(Calisan calisan)
         {
+            
+            
             _calisanDal.Delete(calisan);
             return new SuccessResult("Calisan silindi");
         }

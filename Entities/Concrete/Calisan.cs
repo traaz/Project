@@ -18,5 +18,7 @@ namespace Entities.Concrete
         public int Lisans { get; set; }
         public int YuksekLisans { get; set; }
         public int Doktora { get; set; }
+
+        
     }
 }

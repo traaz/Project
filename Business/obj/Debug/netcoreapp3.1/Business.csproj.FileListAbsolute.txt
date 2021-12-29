@@ -12,6 +12,6 @@ C:\Users\trka8\source\repos\Project\Business\obj\Debug\netcoreapp3.1\Business.Ge
 C:\Users\trka8\source\repos\Project\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
 C:\Users\trka8\source\repos\Project\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
 C:\Users\trka8\source\repos\Project\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
-C:\Users\trka8\source\repos\Project\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
 C:\Users\trka8\source\repos\Project\Business\obj\Debug\netcoreapp3.1\Business.dll
 C:\Users\trka8\source\repos\Project\Business\obj\Debug\netcoreapp3.1\Business.pdb
+C:\Users\trka8\source\repos\Project\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete

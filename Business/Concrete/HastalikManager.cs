@@ -50,6 +50,16 @@ namespace Business.Concrete
             return new SuccessDataResult<List<HastalikDto>>(_hastalikDal.GetSehirHastalik(sehir));
         }
 
+        public IDataResult<List<SonBirAyCovidDto>> GetSonBirAyCovidDto()
+        {
+            return new SuccessDataResult<List<SonBirAyCovidDto>>(_hastalikDal.GetSonBirAyCovidDto());
+        }
+
+        public IDataResult<List<int>> GetTop10HastalikCalisanId()
+        {
+            return new SuccessDataResult<List<int>>(_hastalikDal.GetTop10HastalikCalisanId());
+        }
+
         public IResult Update(Hastalik hastalik)
         {
             _hastalikDal.Update(hastalik);

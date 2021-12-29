@@ -12,5 +12,6 @@ namespace DataAccess.Abstract
         List<BiontechDto> GetBiontech();
         AsiCovidDto GetAsiCovid();
         List<KanGrubuCovidDto> GetKanGrubuCovidDto();
+
     }
 }

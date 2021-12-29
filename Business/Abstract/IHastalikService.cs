@@ -16,5 +16,7 @@ namespace Business.Abstract
         IDataResult<List<string>> GetHastalikDto();
         IDataResult<List<HastaCalisanlarDto>> GetHastaCalisanlarDto();
         IDataResult<List<HastalikDto>> GetSehirTopHastalik(string sehir);
+        IDataResult<List<int>> GetTop10HastalikCalisanId();
+        IDataResult<List<SonBirAyCovidDto>> GetSonBirAyCovidDto();
     }
 }

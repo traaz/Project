@@ -1,4 +1,5 @@
 ﻿using Core.DataAccess;
+using Core.Utilities.Results;
 using Entities.Concrete;
 using Entities.DTOs;
 using System;
@@ -13,6 +14,7 @@ namespace DataAccess.Abstract
         EgitimDurumuCovidDto GetLisansCovid();
         EgitimDurumuCovidDto GetYuksekLisansCovid();
         EgitimDurumuCovidDto GetDoktoraCovid();
+      
         
     }
 }
