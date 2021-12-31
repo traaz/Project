@@ -63,60 +63,6 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpGet("getTop3Hastalik")]
-        public IActionResult GetTopHastalik()
-        {
-            var result = _hastalikService.GetHastalikDto();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpGet("getTop3HastalikCalisanlar")]
-        public IActionResult GetTopHastalikCalisanlar()
-        {
-            var result = _hastalikService.GetHastaCalisanlarDto();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-
-
-        [HttpGet("getSehirTop3Hastaliklar")]
-        public IActionResult GetSehirTopHastaliklar(string sehir)
-        {
-            var result = _hastalikService.GetSehirTopHastalik(sehir);
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpGet("getTop10HastalikCalisanId")]
-        public IActionResult GetTop10HastalikCalisanId( )
-        {
-            var result = _hastalikService.GetTop10HastalikCalisanId();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpGet("getTop10HastalikCalisanSonBirAyCovid")]
-        public IActionResult GetTop10HastalikCalisanIdSonBirAyCovid()
-        {
-            var result = _hastalikService.GetSonBirAyCovidDto();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
+      
     }
 }

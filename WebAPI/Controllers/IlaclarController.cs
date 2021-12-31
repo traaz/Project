@@ -61,36 +61,6 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getTop3Ilac")]
-        public IActionResult GetTop3Ilac()
-        {
-            var result = _ilacService.GetTop3Ilac();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-        [HttpGet("getTop3IlacCovid")]
-        public IActionResult GetIlacCovid()
-        {
-            var result = _ilacService.GetIlacCovidDto();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpGet("getCovid")]
-        public IActionResult GetCovid(string ilac)
-        {
-            var result = _ilacService.GetCovid(ilac);
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
+       
     }
 }

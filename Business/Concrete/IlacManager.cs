@@ -40,6 +40,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<IlacCovidDto>>(_ilacDal.GetCovid(ilac));
         }
 
+        public IDataResult<List<IlacCalisanDto>> GetIlacCalisan(string ilac)
+        {
+            return new SuccessDataResult<List<IlacCalisanDto>>(_ilacDal.GetIlacCalisanDto(ilac));
+        }
+
         public IDataResult<List<IlacCovidDto>> GetIlacCovidDto()
         {
             return new SuccessDataResult<List<IlacCovidDto>>(_ilacDal.GetTop3IlacCovidDto());
@@ -48,6 +53,11 @@ namespace Business.Concrete
         public IDataResult<List<string>> GetTop3Ilac()
         {
             return new SuccessDataResult<List<string>>(_ilacDal.GetTop3Ilac());
+        }
+
+        public IDataResult<List<Top3IlacCalisanDto>> GetTop3IlacCalisan()
+        {
+            return new SuccessDataResult<List<Top3IlacCalisanDto>>(_ilacDal.GetTop3IlacCalisanDto());
         }
 
         public IResult Update(Ilac ilac)

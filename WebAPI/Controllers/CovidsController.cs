@@ -61,37 +61,6 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getBiontech")]
-        public IActionResult GetBiontecch()
-        {
-            var result = _covidService.GetBiontech();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpGet("getKanGrubuCovid")]
-        public IActionResult GetKanGrubuCovid()
-        {
-            var result = _covidService.GetKanGrubuCovid();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpGet("getAsiCovidOrani")]
-        public IActionResult GetAsiCovidOrani()
-        {
-            var result = _covidService.GetAsiCovid();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
+       
     }
 }

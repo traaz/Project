@@ -12,5 +12,7 @@ namespace DataAccess.Abstract
         List<string> GetTop3Ilac();
         List<IlacCovidDto> GetTop3IlacCovidDto();
         List<IlacCovidDto> GetCovid(string ilac);
+        List<Top3IlacCalisanDto> GetTop3IlacCalisanDto();
+        List<IlacCalisanDto> GetIlacCalisanDto(string ilac);
     }
 }

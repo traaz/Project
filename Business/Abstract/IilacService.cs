@@ -14,7 +14,9 @@ namespace Business.Abstract
         IResult Delete(Ilac ilac);
         IResult Update(Ilac ilac);
         IDataResult<List<string>> GetTop3Ilac();
+        IDataResult<List<Top3IlacCalisanDto>> GetTop3IlacCalisan();
         IDataResult<List<IlacCovidDto>> GetIlacCovidDto();
+        IDataResult<List<IlacCalisanDto>> GetIlacCalisan(string ilac);
         IDataResult<List<IlacCovidDto>> GetCovid(string ilac);
 
     }

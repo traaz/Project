@@ -62,15 +62,6 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getTop3Belirti")]
-        public IActionResult GetTop3Belirti()
-        {
-            var result = _covBelirtiService.GetTop3Belirti();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
+     
     }
 }

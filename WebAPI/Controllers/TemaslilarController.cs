@@ -62,16 +62,6 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getTop3TemasliId")]
-        public IActionResult GetTop3TemasliId()
-        {
-            var result = _temasliService.GetTop3TemasliId();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
 
     }
 }

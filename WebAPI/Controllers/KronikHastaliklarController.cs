@@ -62,15 +62,6 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getKronikHastalikCovid")]
-        public IActionResult GetKronikHastalikCovid(string kronikHastalik)
-        {
-            var result = kronikHastalikService.GetKronikHastalikCovidDto(kronikHastalik);
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
+      
     }
 }

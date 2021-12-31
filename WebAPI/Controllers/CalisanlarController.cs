@@ -63,30 +63,7 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpGet("getLisansCovid")]
-        public EgitimDurumuCovidDto GetLisansCovid()
-        {
-           return _calisanService.GetLisanCovid();
-            
-        }
-        [HttpGet("getYuksekLisansCovid")]
-        public EgitimDurumuCovidDto GetYuksekLisansCovid()
-        {
-            return _calisanService.GetYuksekLisansCovid();
-
-        }
-        [HttpGet("getDoktoraCovid")]
-        public EgitimDurumuCovidDto GetDoktoraCovid()
-        {
-            return _calisanService.GetDoktoraCovid();
-
-        }
-        [HttpGet("getLisanssizCovid")]
-        public EgitimDurumuCovidDto GetLisanssizCovid()
-        {
-            return _calisanService.GetLisanssizCovid();
-
-        }
+      
 
         [HttpGet("getById")]
         public IActionResult GetById(int id)
