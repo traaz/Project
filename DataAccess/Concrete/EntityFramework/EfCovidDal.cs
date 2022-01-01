@@ -20,8 +20,8 @@ namespace DataAccess.Concrete.EntityFramework
                      group c by 1 into g
                      select new AsiCovidDto
                      {
-                         AsiCovidOrani = g.Sum(x => x.AsiDurumu == "1" ? 1 : 0) / (double)g.Max(x => x.CovidId),
-                         AsisizCovidOrani= g.Sum(x => x.AsiDurumu == "0" ? 1 : 0) / (double)g.Max(x => x.CovidId)
+                         AsiCovidOrani = g.Sum(x => x.AsiDurumu == 1 ? 1 : 0)*100 / (double)g.Max(x => x.CovidId),
+                         AsisizCovidOrani= g.Sum(x => x.AsiDurumu == 0 ? 1 : 0)*100 / (double)g.Max(x => x.CovidId)
 
                      };
                 return query.First();

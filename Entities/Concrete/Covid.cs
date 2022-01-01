@@ -13,8 +13,8 @@ namespace Entities.Concrete
         public DateTime CovidYakalanmaTarih { get; set; }
         public DateTime CovidBitisTarih { get; set; }
 
-        public string AsiDurumu { get; set; }
-        public string KronikHastalik { get; set; }
+        public int AsiDurumu { get; set; }
+        public int KronikHastalikDurumu { get; set; }
 
     }
 }
