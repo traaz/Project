@@ -14,6 +14,7 @@ namespace DataAccess.Abstract
         EgitimDurumuCovidDto GetLisansCovid();
         EgitimDurumuCovidDto GetYuksekLisansCovid();
         EgitimDurumuCovidDto GetDoktoraCovid();
+       
       
         
     }

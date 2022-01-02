@@ -11,5 +11,6 @@ namespace Entities.Concrete
         public string IlacIsmi { get; set; }
         public int HastalikId { get; set; }
         public int CalisanId { get; set; }
+        public string Doz { get; set; }
     }
 }

@@ -15,7 +15,6 @@ namespace DataAccess.Concrete.EntityFramework
     public class EfCalisanDal : EfEntityRepositoryBase<Calisan, SirketDBContext>, ICalisanDal
     {
        
-
         public EgitimDurumuCovidDto GetDoktoraCovid()
         {
             using (SirketDBContext context = new SirketDBContext())
